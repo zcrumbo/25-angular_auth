@@ -1,0 +1,17 @@
+body{
+  background-color: maroon;
+}
+
+/* BASE */
+@import "lib/base/reset";
+@import "lib/base/base";
+
+/* LAYOUT */
+@import "lib/layout/content";
+@import "lib/layout/header";
+
+/* COMPONENT */
+@import "../component/login/login";
+@import "../component/signup/signup";
+@import "../component/player-info/player-info";
+/* @import "lib/base/reset"; */
