@@ -1,10 +1,11 @@
 @import '../theme/vars';
 
 body{
-  background-color: $primarycolor;
+  background-color: $secondarycolor;
   font-size: 2.5vw;
   font-family: times;
   color: $secondarycolor;
+  display: relative;
 }
 
 a{
@@ -14,4 +15,14 @@ a{
   &hover{
     color:white;
   }
+}
+
+.signup-form{
+  margin: 15px;
+  height:400px;
+  width: 50%;
+}
+main{
+  background-color: $primarycolor;
+  margin: $gutter-std;
 }
