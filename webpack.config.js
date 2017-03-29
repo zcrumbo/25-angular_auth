@@ -1,10 +1,11 @@
 'use strict';
 
-require('dotenv').load();
-
+const dotenv = require('dotenv');
 const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+dotenv.load();
 
 module.exports = {
   devtool: 'eval',
