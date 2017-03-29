@@ -1,6 +1,6 @@
 'use stirct';
 
-require('./scss/lib/main.scss');
+require('./scss/main.scss');
 
 const path = require('path');
 const angular = require('angular');

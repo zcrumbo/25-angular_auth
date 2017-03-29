@@ -1,6 +1,3 @@
-body{
-  background-color: maroon;
-}
 
 /* BASE */
 @import "lib/base/reset";
@@ -13,5 +10,6 @@ body{
 /* COMPONENT */
 @import "../component/login/login";
 @import "../component/signup/signup";
-@import "../component/player-info/player-info";
-/* @import "lib/base/reset"; */
+
+/* VIEW */
+@import "../view/landing/landing";

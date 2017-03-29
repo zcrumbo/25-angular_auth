@@ -1,0 +1,17 @@
+@import '../theme/vars';
+
+body{
+  background-color: $primarycolor;
+  font-size: 2.5vw;
+  font-family: times;
+  color: $secondarycolor;
+}
+
+a{
+  text-decoration: none;
+  color: navy;
+
+  &hover{
+    color:white;
+  }
+}
