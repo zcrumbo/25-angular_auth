@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+
+$primaryColor: #D8D8D8;
+$secondaryColor: #4A4A4A;
+$tertiaryColor: #9B9B9B;
+$white: #fff;
+$black: #000;
+
+$gutter: 3%;
+
+$fontStack: 'Open Sans', Helvetica, sans-serif;
+$primaryTextSize: 4.4vw;
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}

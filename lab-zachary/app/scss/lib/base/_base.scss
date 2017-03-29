@@ -1,0 +1,67 @@
+
+body{
+  background-color: $primaryColor;
+  font-family: $fontStack;
+  display: relative;
+
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    color: $secondaryColor;
+  }
+  .clearfix{
+    clear: both;
+  }
+  nav {
+    background-color: $secondaryColor;
+    color: $white;
+    height:90px;
+    img{
+      max-height: 70%;
+      width: auto;
+      margin: $gutter/2 $gutter;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    h1{
+      display: inline-block;
+      font-size: $primaryTextSize;
+      vertical-align: middle;
+    }
+  }
+  main {
+    margin:$gutter;
+  }
+  form{
+    width:100%;
+  }
+  input{
+    width: 100%;
+    box-sizing:border-box;
+    border: 1px solid $tertiaryColor;
+    margin: $gutter 0;
+    font-size: 16px;
+    height: 40px;
+    padding:5px;
+    @include rounded(3px);
+  }
+
+  .btn-std{
+    @extend input;
+    width: unset;
+    padding: $gutter/2 $gutter*2.5;
+    background-color: $secondaryColor;
+    color: $white;
+    font-weight: 300;
+    float:right;
+  }
+
+  footer{
+    background-color: $tertiaryColor;
+    height:70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
