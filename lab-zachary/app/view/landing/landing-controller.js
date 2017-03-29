@@ -8,5 +8,7 @@ function LandingController($log, $location, authService) {
   $log.debug('LandingController');
 
   let url = $location.url();
+  $log.debug('/join#signup:',url === '/join#signup', '/join:', url === '/join');
+
   this.showSignup = url === '/join#signup' || url === '/join';
 }
