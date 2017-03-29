@@ -1,6 +1,6 @@
 @import '../theme/vars';
 
-body{
+/* body{
   background-color: $secondarycolor;
   font-size: 2.5vw;
   font-family: times;
@@ -25,4 +25,72 @@ a{
 main{
   background-color: $primarycolor;
   margin: $gutter-std;
+} */
+
+body{
+  background-color: $primarycolor;
+  font-family: times;
+  display: relative;
+
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    color: $secondarycolor;
+  }
+  .clearfix{
+    clear: both;
+  }
+  nav {
+    background-color: $secondarycolor;
+    color: $white;
+    height:90px;
+    img{
+      height: 70px;
+      width: auto;
+      margin: $gutter-std/2 $gutter-std;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    h1{
+      display: inline-block;
+      font-size: 2vw;
+      vertical-align: middle;
+    }
+  }
+  main {
+    margin:$gutter-std;
+  }
+  form{
+    width:100%;
+  }
+  input{
+    width: 100%;
+    box-sizing:border-box;
+    border: 1px solid grey;
+    margin: $gutter-std /2;
+    margin-left: 2%;
+    font-size: 16px;
+    text-align: left;
+    height: 60px;
+    padding:5px;
+  }
+
+  .btn-std{
+
+    width: unset;
+    padding: 0 $gutter-std*2.5;
+    background-color: $secondarycolor;
+    color: $white;
+    font-weight: 300;
+    float:right;
+    margin-right:-20px;
+  }
+
+  footer{
+    background-color: grey;
+    height:70px;
+    width: 100%;
+    // position: absolute;
+    // bottom: 0px;
+  }
 }
