@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/karma/bin/karma start --single-run",
+    "test-watch": "./node_modules/karma/bin/karma start",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "build": "./node_modules/webpack/bin/webpack.js",
     "lint": "eslint ."
