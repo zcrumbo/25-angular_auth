@@ -17,7 +17,7 @@ body{
     color: $white;
     height:90px;
     img{
-      max-height: 70%;
+      height: 70px;
       width: auto;
       margin: $gutter/2 $gutter;
       display: inline-block;
@@ -49,7 +49,7 @@ body{
   .btn-std{
     @extend input;
     width: unset;
-    padding: $gutter/2 $gutter*2.5;
+    padding: 0 $gutter*2.5;
     background-color: $secondaryColor;
     color: $white;
     font-weight: 300;
