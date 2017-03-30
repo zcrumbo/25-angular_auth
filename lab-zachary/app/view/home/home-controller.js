@@ -5,7 +5,7 @@ require('./_home.scss');
 module.exports = ['$log','$rootScope', 'galleryService', HomeController];
 
 function HomeController($log, $rootScope, galleryService) {
-  $log.debug('HomeController', galleryService.fetchGalleries);
+  $log.debug('HomeController');
 
   this.galleries = [];
 
@@ -13,7 +13,16 @@ function HomeController($log, $rootScope, galleryService) {
     galleryService.fetchGalleries()
     .then( galleries => {
       this.galleries = galleries;
-      console.log('test',galleries)
+    });
+  };
+
+  this.deleteGallery = function(gallery) {
+    galleryService.deleteGallery(gallery)
+    .then( _gallery => {
+      $log.debug('gallery deleted:', _gallery );
+    })
+    .catch( err => {
+      $log.error( err);
     });
   };
 

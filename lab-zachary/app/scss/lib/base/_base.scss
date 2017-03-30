@@ -15,6 +15,9 @@ body{
 
   main {
     margin:$gutter;
+
+    min-height: calc(100vh - 70px);
+
   }
   form{
     width:100%;

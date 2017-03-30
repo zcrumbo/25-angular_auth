@@ -3,6 +3,7 @@
   <h2 ng-if="homeCtrl.galleries.length">Galleries</h2>
   <ul>
     <li ng-repeat="gallery in homeCtrl.galleries" >
+    <button class="btn-std btn-del" ng-click="homeCtrl.deleteGallery(gallery._id)">delete</button>
       <div><span>name: </span><span>{{ gallery.name }}</span></div>
       <div><span>description: </span><span>{{ gallery.desc }}</span></div>
       <div><span>id: </span><span>{{ gallery._id }}</span></div>
