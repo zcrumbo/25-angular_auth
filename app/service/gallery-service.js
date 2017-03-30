@@ -10,6 +10,7 @@ function galleryService($q, $log, $http, authService) {
 
   service.createGallery = function(gallery){
     $log.debug('galleryService.createGallery');
+    
     return authService.getToken()
     .then( token => {
       let url = `${__API_URL__}/api/gallery`;
@@ -68,7 +69,7 @@ function galleryService($q, $log, $http, authService) {
     })
     .then( res => {
       $log.log('galleries retrieved');
-      servive.galleries = res.data;
+      service.galleries = res.data;
       return service.galleries;
     })
     .catch( err => {

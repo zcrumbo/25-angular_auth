@@ -5,6 +5,8 @@ const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const production = process.env.NODE_ENV === 'production';
+
 dotenv.load();
 
 module.exports = {
@@ -19,11 +21,10 @@ module.exports = {
       template: `${__dirname}/app/index.html`
     }),
     new ExtractTextPlugin('bundle.css'),
-    // webpack constant env varible used for our app
     new webpack.DefinePlugin({
-      __API_URL__: JSON.stringify(process.env.API_URL)
+      __API_URL__: JSON.stringify(process.env.API_URL),
+      __DEBUG__: JSON.stringify(!production)
     })
-    // API_URL is for our backend
   ],
   module: {
     rules: [
