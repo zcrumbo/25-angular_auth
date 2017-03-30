@@ -1,0 +1,30 @@
+@import '../../scss/lib/base/global-vars';
+
+nav {
+    background-color: $secondaryColor;
+    color: $white;
+    img{
+      height: 70px;
+      width: auto;
+      margin: $gutter/2 $gutter;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    h1{
+      display: inline-block;
+      font-size: $primaryTextSize;
+      vertical-align: middle;
+    }
+    div{
+      float: right;
+      margin: $gutter;
+      min-width: 150px;
+
+    .btn-std {
+      background-color: $primaryColor;
+      color: $secondaryColor;
+      padding: 0 $gutter*5;
+      //min-width: 85px;
+     }
+    }
+  }

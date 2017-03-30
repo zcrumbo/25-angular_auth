@@ -1,3 +1,11 @@
 <section class="home-content">
-  <h2>Welcome Home</h2>
+  <create-gallery></create-gallery>
+  <h2 ng-if="homeCtrl.galleries.length">Galleries</h2>
+  <ul>
+    <li ng-repeat="gallery in homeCtrl.galleries" >
+      <div><span>name: </span><span>{{ gallery.name }}</span></div>
+      <div><span>description: </span><span>{{ gallery.desc }}</span></div>
+      <div><span>id: </span><span>{{ gallery._id }}</span></div>
+    </li>
+  </ul>
 </section>

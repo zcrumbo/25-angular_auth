@@ -2,17 +2,24 @@
 
 require('./_home.scss');
 
-module.exports = ['$log','$location', 'authService', HomeController];
+module.exports = ['$log','$rootScope', 'galleryService', HomeController];
 
-function HomeController($log, $location, authService) {
-  $log.debug('HomeController');
+function HomeController($log, $rootScope, galleryService) {
+  $log.debug('HomeController', galleryService.fetchGalleries);
 
+  this.galleries = [];
 
-  authService.getToken()
-  .then( () => {
-  })
-  .catch( err => {
-    $log.error('HomeController: ', err);
-    $location.url('');
+  this.fetchGalleries = function() {
+    galleryService.fetchGalleries()
+    .then( galleries => {
+      this.galleries = galleries;
+      console.log('test',galleries)
+    });
+  };
+
+  this.fetchGalleries();
+
+  $rootScope.$on('$locationChangeSuccess', () => {
+    this.fetchGalleries();
   });
 }

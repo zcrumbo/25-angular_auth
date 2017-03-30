@@ -1,0 +1,26 @@
+@import '../../scss/lib/base/global-vars';
+
+.home-content {
+  h2 {
+    font-size: $primaryTextSize * .6;
+    margin-bottom: $gutter;
+  }
+  li {
+    background-color: $tertiaryColor;
+    color: $secondaryColor;
+    padding: $gutter;
+    @include rounded;
+    div {
+      margin-bottom: $gutter ;
+
+      span:first-child {
+      font-weight: bold;
+      }
+      span:last-child {
+      }
+    }
+    div:last-child {
+      margin-bottom:0;
+    }
+  }
+}
