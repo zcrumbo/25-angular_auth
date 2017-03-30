@@ -62,6 +62,30 @@ function galleryService($log, $q, $http, authService) {
     });
   };
 
+  service.updateGallery = function(gallery) {
+    $log.debug('galleryService.updateGallery', gallery);
+
+    return authService.getToken()
+    .then( token => {
+      let config = {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          Authorization: `Bearer ${token}`,
+        }
+      };
+      return $http.put(`${url}/api/gallery/${gallery._id}`, gallery, config);
+    })
+    .then( res => {
+      $log.log('gallery updated:', res.data);
+      return res.data;
+    })
+    .catch( err => {
+      $log.error(err);
+      return $q.reject(err);
+    });
+  };
+
   service.deleteGallery = function(gallery) {
     $log.debug('authService.deleteGallery');
 
@@ -87,10 +111,6 @@ function galleryService($log, $q, $http, authService) {
       $log.error(err);
       return $q.reject(err);
     });
-  };
-
-  service.updateGallery = function() {
-
   };
 
   return service;
