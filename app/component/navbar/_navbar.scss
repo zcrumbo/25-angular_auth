@@ -1,0 +1,19 @@
+@import '../../scss/lib/theme/vars';
+
+.navbar {
+  background-color: $secondarycolor;
+  color: $white;
+  height:90px;
+  img{
+    height: 70px;
+    width: auto;
+    margin: 1%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  h1{
+    display: inline-block;
+    font-size: 2vw;
+    vertical-align: middle;
+  }
+}
