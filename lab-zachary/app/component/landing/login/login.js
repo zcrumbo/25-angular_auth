@@ -24,4 +24,4 @@ function LoginController($log, $location, authService) {
       $location.url('/home');
     });
   };
-};
+}

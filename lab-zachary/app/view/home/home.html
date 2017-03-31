@@ -1,21 +1,7 @@
-<section class="home-content">{{ homeCtrl.editor }}
+<section class="home-content">
   <create-gallery></create-gallery>
-  <h2 ng-if="homeCtrl.galleries.length">Galleries</h2>
+  <h2 ng-if="homeCtrl.galleries">Galleries</h2>
   <ul>
-    <li ng-repeat="gallery in homeCtrl.galleries" >
-    <button class="btn-std btn-del" ng-show="!homeCtrl.editor" ng-click="homeCtrl.edit()">edit</button>
-
-    <button class="btn-std btn-del" ng-show="homeCtrl.editor" ng-click="homeCtrl.deleteGallery(gallery._id)">delete</button>
-    <button class="btn-std btn-del" ng-show="homeCtrl.editor" ng-click="homeCtrl.updateGallery(gallery._id)">update</button>
-      <div><span>name: </span>
-      <span ng-show="!homeCtrl.editor">{{ gallery.name }}</span>
-      <input ng-show="homeCtrl.editor" ng-model="gallery.name" type="text">
-      </div>
-      <div><span>description: </span>
-      <span ng-show="!homeCtrl.editor">{{ gallery.desc }}</span>
-      <input ng-show="homeCtrl.editor" ng-model="gallery.desc" type="text">
-      </div>
-      <div><span>id: </span><span>{{ gallery._id }}</span></div>
-    </li>
+    <gallery-item ng-repeat="gallery in homeCtrl.galleries" gallery="gallery"></gallery-item>
   </ul>
 </section>

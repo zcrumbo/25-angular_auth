@@ -11,7 +11,7 @@ function NavbarController($log, $location, $rootScope, authService) {
   $log.debug('NavbarController');
 
   this.checkPath = function() {
-    let path = ($location.path() === '/join')
+    let path = ($location.path() === '/join');
 
     //$log.debug($location.path);
 

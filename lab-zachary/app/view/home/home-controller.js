@@ -8,7 +8,6 @@ function HomeController($log, $rootScope, galleryService) {
   $log.debug('HomeController');
 
   this.galleries = [];
-  this.editor = false;
 
   this.fetchGalleries = function() {
     galleryService.fetchGalleries()
@@ -17,15 +16,7 @@ function HomeController($log, $rootScope, galleryService) {
     });
   };
 
-  this.deleteGallery = function(gallery) {
-    galleryService.deleteGallery(gallery)
-    .then( _gallery => {
-      $log.debug('gallery deleted:', _gallery );
-    })
-    .catch( err => {
-      $log.error( err);
-    });
-  };
+
 
   this.updateGallery = function(gallery) {
     galleryService.updateGallery(gallery)
@@ -37,9 +28,7 @@ function HomeController($log, $rootScope, galleryService) {
     });
   };
 
-  this.edit = () => {
-    this.editor = true;
-  };
+
 
   this.fetchGalleries();
 

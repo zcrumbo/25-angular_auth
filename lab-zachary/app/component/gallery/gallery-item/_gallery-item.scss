@@ -1,0 +1,45 @@
+@import '../../../scss/lib/base/global-vars';
+
+.gallery-item {
+    .current-item{
+      background-color: $tertiaryColor;
+      color: $secondaryColor;
+      padding: $gutter/2 $gutter;
+      margin: $gutter 0 ;
+      @include rounded;
+      div {
+        margin-bottom: $gutter/2 ;
+        padding: 1.1% 0;
+
+        span:first-child {
+        font-weight: bold;
+        }
+        span:last-child {
+        }
+      }
+      div:last-child {
+        margin-bottom:0;
+      }
+      }
+  }
+  div.edit-buttons{
+    float:right;
+    text-align: right;
+    width:100%;
+    margin:0vw 0 2vw 0;
+
+    button.btn-std{
+      margin: 0;
+      background-color:$secondaryColor;
+      color:$primaryColor;
+      float:none;
+
+      &.del{
+        margin-left: $gutter;
+        padding-left:$gutter*2;
+        padding-right:$gutter*2;
+        color: $secondaryColor;
+        background-color: $primaryColor/1.2;
+      }
+  }
+}

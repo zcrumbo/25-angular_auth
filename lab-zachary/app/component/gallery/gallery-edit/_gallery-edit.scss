@@ -1,0 +1,15 @@
+@import '../../../scss/lib/base/global-vars';
+
+form.gallery-edit{
+  .current-item{
+    input {
+      display:inline-block;
+      width: 50%;
+      height: unset;
+      margin: 0;
+      padding: .1vw;
+      background-color: $tertiaryColor*1.2;
+      border:none;
+    }
+  }
+}

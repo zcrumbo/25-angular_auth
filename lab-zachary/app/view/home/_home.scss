@@ -5,30 +5,4 @@
     font-size: $primaryTextSize * .9;
     margin-bottom: $gutter;
   }
-  li {
-    background-color: $tertiaryColor;
-    color: $secondaryColor;
-    padding: $gutter;
-    margin-bottom: $gutter;
-    @include rounded;
-    div {
-      margin-bottom: $gutter ;
-
-      span:first-child {
-      font-weight: bold;
-      }
-      span:last-child {
-      }
-    }
-    div:last-child {
-      margin-bottom:0;
-    }
-    .btn-del{
-      float: right;
-      margin-top: 0;
-      padding: $gutter/3;
-      background-color:$secondaryColor;
-      color:$primaryColor;
-    }
-  }
 }

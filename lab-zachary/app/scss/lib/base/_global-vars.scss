@@ -9,7 +9,8 @@ $black: #000;
 $gutter: 3%;
 
 $fontStack: 'Open Sans', Helvetica, sans-serif;
-$primaryTextSize: 4.4vw;
+$primaryTextSize: 5.4vw;
+$secondaryTextSize: 3vw;
 
 @mixin rounded($radius: 0.5em) {
   -webkit-border-radius: $radius;

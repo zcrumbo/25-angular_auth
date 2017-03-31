@@ -3,6 +3,7 @@ body{
   background-color: $primaryColor;
   font-family: $fontStack;
   display: relative;
+  font-size: $secondaryTextSize;
 
   a{
     text-decoration: none;
@@ -15,7 +16,6 @@ body{
 
   main {
     margin:$gutter;
-
     min-height: calc(100vh - 70px);
 
   }
@@ -27,16 +27,15 @@ body{
     box-sizing:border-box;
     border: 1px solid $tertiaryColor;
     margin: $gutter 0;
-    font-size: 16px;
-    height: 40px;
-    padding:5px;
+    font-size: $secondaryTextSize;
+    padding:1%;
     @include rounded(3px);
   }
 
   .btn-std{
     @extend input;
     width: unset;
-    padding: 0 $gutter*2.5;
+    padding: 1% $gutter*2.5;
     background-color: $secondaryColor;
     color: $white;
     font-weight: 300;

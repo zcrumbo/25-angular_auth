@@ -1,0 +1,20 @@
+  <form ng-submit="galleryEditCtrl.updateGallery()" class="gallery-edit">
+    <div class="current-item">
+    <div>
+    <span>name: </span>
+      <input type="text" name="name"
+        ng-model="galleryEditCtrl.gallery.name"
+        placeholder="{{ galleryEditCtrl.gallery.name }}">
+    </div>
+    <div>
+    <span>description: </span>
+      <input type="text" name="desc"
+      ng-model="galleryEditCtrl.gallery.desc"
+      placeholder="{{ galleryEditCtrl.gallery.desc}}">
+    </div>
+  </div>
+  <div class="edit-buttons">
+  <button class="btn-std"
+  type="submit">
+  update</button>
+</form>

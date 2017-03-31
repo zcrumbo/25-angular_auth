@@ -4,7 +4,7 @@ nav {
     background-color: $secondaryColor;
     color: $white;
     img{
-      height: 70px;
+      height: 10vw;
       width: auto;
       margin: $gutter/2 $gutter;
       display: inline-block;
@@ -12,19 +12,18 @@ nav {
     }
     h1{
       display: inline-block;
-      font-size: $primaryTextSize;
+      font-size: $primaryTextSize*1.2;
       vertical-align: middle;
     }
-    div{
-      float: right;
-      margin: $gutter;
-      min-width: 150px;
+
 
     .btn-std {
       background-color: $primaryColor;
       color: $secondaryColor;
-      padding: 0 $gutter*5;
+      padding: $gutter/3.2 $gutter;
+      margin: $gutter*1.3 $gutter
+
       //min-width: 85px;
-     }
+
     }
   }
