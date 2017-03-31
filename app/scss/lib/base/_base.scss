@@ -13,23 +13,7 @@ body{
   .clearfix{
     clear: both;
   }
-  nav {
-    background-color: $secondarycolor;
-    color: $white;
-    height:90px;
-    img{
-      height: 70px;
-      width: auto;
-      margin: $gutter-std/2 $gutter-std;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    h1{
-      display: inline-block;
-      font-size: 2vw;
-      vertical-align: middle;
-    }
-  }
+
   main {
     margin:$gutter-std;
   }

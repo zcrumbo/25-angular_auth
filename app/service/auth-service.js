@@ -62,7 +62,7 @@ function authService($q, $log, $http, $window) {
         Authorization: `Basic ${base64}`
       }
     };
-    return $http.get(url,config)
+    return $http.get(url, config)
       .then( res => {
         $log.log('success', res.data);
         return setToken(res.data);
