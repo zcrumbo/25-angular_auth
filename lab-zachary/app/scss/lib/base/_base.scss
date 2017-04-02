@@ -49,5 +49,10 @@ body{
     // position: absolute;
     // bottom: 0px;
   }
+  pre{
+    max-width:100%;
+    font-style: monospace;
+    overflow: auto;
+  }
 }
 

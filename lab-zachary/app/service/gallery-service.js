@@ -77,10 +77,10 @@ function galleryService($log, $q, $http, authService) {
       return $http.put(`${url}/api/gallery/${galleryID}`, galleryData, config);
     })
     .then( res => {
-      $log.log('gallery updated:', res.data);
-      service.galleries.forEach( (_gallery, index) => {
-        if (_gallery._id === galleryID) service.galleries[index] = res.data;
-      });
+      $log.log('gallery updated:');
+      // service.galleries.forEach( (_gallery, index) => {
+      //  if (_gallery._id === galleryID) service.galleries[index] = res.data;
+      // });
       return res.data;
     })
     .catch( err => {

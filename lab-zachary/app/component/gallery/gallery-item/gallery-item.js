@@ -7,7 +7,7 @@ module.exports = {
   controller: ['$log', 'galleryService', GalleryItemController],
   controllerAs: 'galleryItemCtrl',
   bindings: {
-    gallery: '<'
+    gallery: '<',
   }
 };
 

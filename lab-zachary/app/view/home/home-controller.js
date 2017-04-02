@@ -18,16 +18,6 @@ function HomeController($log, $rootScope, galleryService) {
 
 
 
-  this.updateGallery = function(gallery) {
-    galleryService.updateGallery(gallery)
-    .then( _gallery => {
-      $log.debug('gallery updated',_gallery);
-    })
-    .catch( err => {
-      $log.error( err );
-    });
-  };
-
 
 
   this.fetchGalleries();

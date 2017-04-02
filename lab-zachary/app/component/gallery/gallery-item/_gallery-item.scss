@@ -28,7 +28,7 @@
     width:100%;
     margin:0vw 0 2vw 0;
 
-    button.btn-std{
+    .btn-std{
       margin: 0;
       background-color:$secondaryColor;
       color:$primaryColor;
@@ -41,5 +41,6 @@
         color: $secondaryColor;
         background-color: $primaryColor/1.2;
       }
+
   }
 }
