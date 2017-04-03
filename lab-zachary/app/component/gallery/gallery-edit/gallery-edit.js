@@ -7,26 +7,25 @@ module.exports = {
   controller: ['$log', 'galleryService', GalleryEditController],
   controllerAs: 'galleryEditCtrl',
   bindings: {
-    gallery: '<',
-    showEditGallery: '='
+    gallery: '=',
+    showEditGallery: '=',
+    oldData: '<'
   }
 };
 
 function GalleryEditController($log, galleryService) {
   $log.debug('GalleryEditController');
-  this.galleries = galleryService.galleries;
+  //this.galleries = galleryService.galleries;
+  $log.debug(this.oldData, this);
   this.cancelUpdate = function() {
+    $log.debug(this.gallery);
+    this.gallery = this.oldData;
     this.showEditGallery = false;
-    galleryService.fetchGalleries()
-    .then( oGalleries => {
-      oGalleries.forEach( (_gallery, index) => {
-        if (_gallery._id === this.gallery._id) this.galleries[index] = _gallery;
-      });
-    })
-    .catch( err => {
-      $log.error(err);
-    });
+
+
+
   };
+
   this.updateGallery = function() {
     $log.debug('GalleryEditController.updateGallery');
     galleryService.updateGallery(this.gallery._id, this.gallery)

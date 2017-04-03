@@ -32,8 +32,9 @@ function galleryService($log, $q, $http, authService) {
         return $q.reject(err);
       });
     });
-
-
+  };
+  service.cancelUpdate = function() {
+    service.fetchGalleries();
   };
 
   service.createGallery = function(gallery) {

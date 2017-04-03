@@ -9,12 +9,13 @@
   </div>
     <gallery-edit gallery="galleryItemCtrl.gallery"
     show-edit-gallery="galleryItemCtrl.showEditGallery"
+    old-data="galleryItemCtrl.oldData"
       ng-if="galleryItemCtrl.showEditGallery">
     </gallery-edit>
  </li>
 <div class="edit-buttons" ng-if="!galleryItemCtrl.showEditGallery">
   <button class="btn-std"
-  ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">
+  ng-click="galleryItemCtrl.editGallery()">
   edit</button>
   <button class="btn-std del"
   ng-click="galleryItemCtrl.deleteGallery()">delete</button>
