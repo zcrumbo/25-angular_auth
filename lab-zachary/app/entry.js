@@ -7,10 +7,12 @@ const path = require('path');
 const uiRouter = require('angular-ui-router');
 const ngTouch = require('angular-touch');
 const ngAnimate = require('angular-animate');
+const ngFileUpload = require('ng-file-upload');
+
 
 require('./scss/main.scss');
 
-const cfgram = angular.module('cfgram', [ngTouch, ngAnimate, uiRouter]);
+const cfgram = angular.module('cfgram', [ngTouch, ngAnimate, uiRouter, ngFileUpload]);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( key => {

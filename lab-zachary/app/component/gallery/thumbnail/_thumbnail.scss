@@ -1,0 +1,15 @@
+@import '../../../scss/lib/base/global-vars';
+
+.thumbnail{
+  width:100%;
+  margin-bottom: $gutter*2;
+
+  img{
+    max-width: 100%;
+    margin:0 auto;
+    display: block;
+    clear:both;
+  }
+
+
+}

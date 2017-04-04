@@ -1,0 +1,9 @@
+@import '../../../scss/lib/base/global-vars';
+
+
+.thumbnail-container{
+  margin: $gutter*3 0;
+    h3 {
+    margin-bottom: $gutter*2;
+  }
+}

@@ -17,3 +17,10 @@ $secondaryTextSize: 3vw;
   -moz-border-radius: $radius;
   border-radius: $radius*2;
 }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
