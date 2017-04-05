@@ -24,4 +24,4 @@ function UploadPicController($log, picService) {
       this.pic.file = null;
     });
   };
-};
+}
