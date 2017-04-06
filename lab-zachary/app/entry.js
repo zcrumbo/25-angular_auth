@@ -43,3 +43,5 @@ context.keys().forEach( key => {
   console.log('component:', key, name, module);
   cfgram.component(name, module);
 });
+
+
