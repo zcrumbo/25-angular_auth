@@ -76,7 +76,7 @@ describe('Gallery Item Component', function(){
 
       expect(galleryItemCtrl.showEditGallery).toEqual(true);
       expect(galleryItemCtrl.oldData).toEqual(mockBindings.gallery);
+      this.$rootScope.$apply();
     });
   });
-
 });
