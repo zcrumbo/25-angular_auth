@@ -79,9 +79,7 @@ function galleryService($log, $q, $http, authService) {
     })
     .then( res => {
       $log.log('gallery updated:');
-      // service.galleries.forEach( (_gallery, index) => {
-      //  if (_gallery._id === galleryID) service.galleries[index] = res.data;
-      // });
+
       return res.data;
     })
     .catch( err => {

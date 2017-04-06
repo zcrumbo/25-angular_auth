@@ -8,7 +8,6 @@ module.exports = {
   controllerAs: 'galleryItemCtrl',
   bindings: {
     gallery: '<',
-    currentGallery: '=',
     deleteDone: '&'
   }
 };
@@ -16,22 +15,22 @@ module.exports = {
 function GalleryItemController($log, galleryService) {
   $log.debug('GalleryItemController');
   this.showEditGallery = false;
-  this.currentGallery = 'test';
 
   this.editGallery = function() {
     this.oldData = angular.copy(this.gallery);
     this.showEditGallery = true;
   };
 
-  this.deleteGallery = () => {
+  this.deleteGallery = function() {
     galleryService.deleteGallery(this.gallery._id)
     .then( () => {
       $log.debug('gallery deleted:', this.currentGallery );
-      this.deleteDone();
+      this.deleteDone(this.gallery);
     })
     .catch( err => {
       $log.error( err);
     });
+    return(this.gallery);
   };
 
 }

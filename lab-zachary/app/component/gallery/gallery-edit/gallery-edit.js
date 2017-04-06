@@ -15,25 +15,17 @@ module.exports = {
 
 function GalleryEditController($log, galleryService) {
   $log.debug('GalleryEditController');
-  //this.galleries = galleryService.galleries;
   $log.debug(this.oldData, this);
+
   this.cancelUpdate = function() {
     $log.debug(this.gallery);
     this.gallery = this.oldData;
     this.showEditGallery = false;
-
-
-
   };
 
   this.updateGallery = function() {
     $log.debug('GalleryEditController.updateGallery');
-    galleryService.updateGallery(this.gallery._id, this.gallery)
-    .then( () => {
-      this.showEditGallery = false;
-    })
-    .catch( err => {
-      $log.error(err);
-    });
+    galleryService.updateGallery(this.gallery._id, this.gallery);
+    this.showEditGallery = false;
   };
 }

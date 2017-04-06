@@ -5,7 +5,7 @@
     <gallery-item ng-repeat="gallery in homeCtrl.galleries"
     gallery="gallery"
     current-gallery="homeCtrl.currentGallery"
-    delete-done="homeCtrl.galleryDeleteDone(homeCtrl.currentGallery)"
+    delete-done="homeCtrl.galleryDeleteDone(gallery)"
     ng-click="homeCtrl.currentGallery=gallery"></gallery-item>
   </ul>
   <thumbnail-container ng-if="homeCtrl.currentGallery" gallery="homeCtrl.currentGallery"></thumbnail-container>
