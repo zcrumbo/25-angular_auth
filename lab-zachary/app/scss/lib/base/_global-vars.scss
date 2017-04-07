@@ -12,6 +12,8 @@ $fontStack: 'Open Sans', Helvetica, sans-serif;
 $primaryTextSize: 5.4vw;
 $secondaryTextSize: 3vw;
 
+$socialIconSize: 8vw;
+
 @mixin rounded($radius: 0.5em) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;

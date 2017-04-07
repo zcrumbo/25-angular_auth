@@ -1,7 +1,7 @@
 <li class="gallery-item">
   <div ng-if="!galleryItemCtrl.showEditGallery" class="current-item">
     <div><span>name: </span>
-    <span>{{ galleryItemCtrl.gallery.name }}</span>
+    <span>{{ galleryItemCtrl.gallery.name | titleCase }}</span>
     </div>
     <div><span>description: </span>
     <span>{{ galleryItemCtrl.gallery.desc }}</span>
