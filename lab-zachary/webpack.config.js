@@ -47,7 +47,11 @@ module.exports = {
           'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
           'image-webpack-loader?bypassOnDebug'
         ]
-      }
+      },
+      {
+        test: /\.(woff|tt|svg|eot).*/,
+        loader: 'url-loader?limit=10000&name=image/[hash].[ext]'
+      },
     ]
   }
 };
