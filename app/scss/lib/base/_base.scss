@@ -55,7 +55,7 @@ body{
           cursor: pointer;
           width: $socialIconSize;
           height: $socialIconSize;
-          background: url('../../assets/sprite.png');
+          background: url('../assets/sprite.png');
           background-size:cover;
           margin: $gutter/2 0 0 $gutter/2;
           &.facebook{
