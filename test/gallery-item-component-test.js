@@ -32,7 +32,7 @@ describe('Gallery Item Component', function(){
     });
 
     it('should call deleteDone with gallery after galleryDelete', () => {
-      let url = 'http://localhost:8000/api/gallery/12345';
+      let url = `${__API_URL__}/api/gallery/12345`;
       let headers = {
         Authorization: 'Bearer test token',
         Accept: 'application/json'

@@ -43,7 +43,7 @@ describe('Gallery Edit Controller', function() {
         showEditGallery: true
       };
 
-      let url = 'http://localhost:8000/api/gallery/12345';
+      let url = `${__API_URL__}/api/gallery/12345`;
       let headers = {
         'Content-Type': 'application/json',
         Accept: 'application/json',

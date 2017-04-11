@@ -26,7 +26,7 @@ describe('Gallery Service Test', function() {
         'Content-Type': 'application/json'
       };
 
-      this.$httpBackend.expectPOST('http://localhost:8000/api/gallery', galleryData, headers)
+      this.$httpBackend.expectPOST(`${__API_URL__}/api/gallery`, galleryData, headers)
       .respond(200, {
         _id: '1234',
         username: 'testuser',
@@ -55,7 +55,7 @@ describe('Gallery Service Test', function() {
         'Content-Type': 'application/json'
       };
 
-      this.$httpBackend.expectPUT('http://localhost:8000/api/gallery/12345', galleryData, headers)
+      this.$httpBackend.expectPUT(`${__API_URL__}/api/gallery/12345`, galleryData, headers)
       .respond(200, {
         _id: '12345',
         username: 'testuser',
@@ -77,7 +77,7 @@ describe('Gallery Service Test', function() {
         Accept: 'application/json',
       };
 
-      this.$httpBackend.expectDELETE('http://localhost:8000/api/gallery/1234', headers)
+      this.$httpBackend.expectDELETE(`${__API_URL__}/api/gallery/1234`, headers)
       .respond(204);
 
       this.galleryService.deleteGallery('1234');
